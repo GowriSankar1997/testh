@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #343a40;
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height:60px
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+
+}
+
+.custom-menu-item {
+height: 33px;
+}
+
+.contributors-button {
+  font-size: 10px;
+  margin-left: 8px;
+  color: rgb(213, 213, 213);
+}
+
+.contributors-text {
+  margin-left: 4px;
+}
+
+
+

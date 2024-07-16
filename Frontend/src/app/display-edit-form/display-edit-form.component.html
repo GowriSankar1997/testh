@@ -1,0 +1,17 @@
+<div class="invoice-header">
+  <h2>Product Description</h2>
+  <!-- You can add additional header details here if needed -->
+</div>
+
+<form (ngSubmit)="onSubmit()" class="custom-form" #invoiceForm="ngForm" >
+  <div class="form-row" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="form-group" *ngFor="let field of leftFields">
+      <textarea class="area" [(ngModel)]="data[field.name]"
+      name="{{ field.name }}" rows="6">
+      </textarea>
+    </div>
+  </div>
+  <!-- <div class="form-row"> -->
+    <button type="submit" class="button row justify-content-center">Search</button>
+  <!-- </div> -->
+</form>

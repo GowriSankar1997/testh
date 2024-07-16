@@ -1,0 +1,39 @@
+<!-- <div class="container" *ngIf= "isBack">
+    <div class="file-upload-container"  >      
+      <button  (click)="onBackClick()" class="upload-button">back</button>
+    </div>
+</div> -->
+<div *ngIf="loading"  class="overlay">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status" >
+        <span class="sr-only" id="loading"></span>
+      </div>
+    </div>
+  </div>
+<div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card shadow p-3 mb-3 rounded" *ngIf= "componentVisible">
+          <div class="card-body bg-body custom-background">    
+           
+                <!-- <button class="close-button" (click)="closeComponent()">X</button>             -->
+                
+            
+            <form (ngSubmit)="makeAPICall()">
+              <div class="mb-3">
+                <input type="text" class="form-control" [(ngModel)]="inputText" name="inputText" placeholder="Enter product url...">
+              </div>
+              <div class="mb-3 text-center">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </form>
+  
+            <div class="form-group mt-4">
+              <textarea class="form-control" rows="3" [value]="apiResponse" placeholder="HSTS product description is..." readonly></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
